@@ -55,7 +55,7 @@ def layers(vgg_layer3_out, vgg_layer4_out, vgg_layer7_out, num_classes):
     :param num_classes: Number of classes to classify
     :return: The Tensor for the last layer of output
     """
-    # TODO: Implement function
+
     layer7a_out = tf.layers.conv2d(vgg_layer7_out, num_classes, 1, 
                                    padding= 'same', 
                                    kernel_initializer= tf.random_normal_initializer(stddev=0.01),
@@ -107,7 +107,7 @@ def optimize(nn_last_layer, correct_label, learning_rate, num_classes):
     :param num_classes: Number of classes to classify
     :return: Tuple of (logits, train_op, cross_entropy_loss)
     """
-    # TODO: Implement function
+
     logits = tf.reshape(nn_last_layer, (-1, num_classes))
     correct_label_reshaped = tf.reshape(correct_label, (-1, num_classes))
 
@@ -137,7 +137,7 @@ def train_nn(sess, epochs, batch_size, get_batches_fn, train_op, cross_entropy_l
     :param keep_prob: TF Placeholder for dropout keep probability
     :param learning_rate: TF Placeholder for learning rate
     """
-    # TODO: Implement function
+
     sess.run(tf.global_variables_initializer())
 
     for i in range(epochs):
@@ -175,7 +175,6 @@ def run():
         # OPTIONAL: Augment Images for better results
         #  https://datascience.stackexchange.com/questions/5224/how-to-prepare-augment-images-for-neural-network
 
-        # TODO: Build NN using load_vgg, layers, and optimize function
 
         epochs = 50
         batch_size = 5
