@@ -75,12 +75,9 @@ Here are a few sample images from the output of the solution, with the segmentat
 ![sample image 10](./images/sample10.png)
 
 
-## Additional Challenges
-
-TBD
-
 ## Conclusion
-TBD
+
+With 50 epochs, the solution was able to overlay the drivable area in many cases even though the result is not perfect.
 
 ## Reference
 
